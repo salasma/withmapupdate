@@ -1,0 +1,41 @@
+<a href="/admin/users"> <input class="btn" value="View all users"> </a>
+
+<br>
+
+<a href="/admin/instances"> <input class="btn" value="View all instances"> </a>
+
+<br>
+
+<a href="/admin/states"> <input class="btn" value="View all states"> </a>
+
+<br>
+
+<a href="/admin/diagnoses"> <input class="btn" value="View all diagnoses"> </a>
+
+<br>
+<a href="/"> <input class="btn" value="Sign Out"> </a>
+
+<br> <br>
+<h3> Please ensure that any additions to the diagnoses tables are agreed upon by the council. </h3>
+<form id = "addUser" action = "/admin/diagnoses" method = "post">
+                    Diagnosis Name: <input type="text" name="diagnosisName"> <br>
+          <input type = "submit" value = "Add New Diagnosis">
+</form>
+
+<br> <br>
+
+<table>
+    <thead>
+        <th>sicknessID</th>
+        <th>diagnosisName</th>
+    </thead>
+    <tbody>
+     <tbody>
+         {{#each diagnoses}}
+         <tr>
+             <td>{{sicknessID}}</td>
+             <td>{{diagnosisName}}</td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>

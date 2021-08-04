@@ -1,0 +1,28 @@
+<a href="/admin/users"> <input class="btn" value="View all users"> </a>
+
+<br>
+
+<a href="/admin/states"> <input class="btn" value="View all states"> </a>
+
+<br>
+
+<a href="/"> <input class="btn" value="Sign Out"> </a>
+
+<table>
+    <thead>
+        <th>startDate</th>
+        <th>endDate</th>
+        <th>userID</th>
+        <th>sicknessID</th>
+    </thead>
+    <tbody>
+        {{#each allinstances}}
+        <tr>
+            <td>{{startDate}}</td>
+            <td>{{endDate}}</td>
+            <td>{{userID}}</td>
+            <td>{{sicknessID}}</td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>

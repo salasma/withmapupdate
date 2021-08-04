@@ -1,0 +1,46 @@
+<a href="/admin/instances"> <input class="btn" value="View all instances"> </a>
+
+<br>
+
+<a href="/admin/states"> <input class="btn" value="View all states"> </a>
+
+<br>
+
+<a href="/admin/diagnoses"> <input class="btn" value="View all diagnoses"> </a>
+
+<br>
+
+<a href="/"> <input class="btn" value="Sign Out"> </a>
+
+<h1>Current users:</h1>
+
+<table>
+    <thead>
+        <th>userID</th>
+        <th>email</th>
+        <th>state</th>
+        <th>status</th>
+        <th>sicknessID</th>
+        <th>first name</th>
+        <th>last name</th>
+        <th>username</th>
+        <th>password</th>
+    </thead>
+    <tbody>
+        {{#each users}}
+        <tr>
+            <td>{{userID}}</td>
+            <td>{{email}}</td>
+            <td>{{stateID}}</td>
+            <td>{{diagnosisName}}</td>
+            <td>{{sicknessID}}</td>
+            <td>{{fname}}</td>
+            <td>{{lname}}</td>
+            <td>{{username}}</td>
+            <td>{{password}}</td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+
+

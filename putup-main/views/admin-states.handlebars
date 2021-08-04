@@ -1,0 +1,38 @@
+<a href="/admin/users"> <input class="btn" value="View all users"> </a>
+
+<br>
+
+<a href="/admin/instances"> <input class="btn" value="View all instances"> </a>
+
+<br>
+
+<a href="/admin/diagnoses"> <input class="btn" value="View all diagnoses"> </a>
+
+<br>
+
+<a href="/"> <input class="btn" value="Sign Out"> </a>
+
+<br> <br>
+<h3> WHAT HAS HAPPENED IF WE'RE ADDING STATES?!?!? </h3>
+<form id = "addUser" action = "/admin/states" method = "post">
+                    State ID: <input type="text" name="stateID"> <br>
+                    State Population: <input type="text" name="statePop"> <br>
+          <input type = "submit" value = "Add New State">
+</form>
+<br><br>
+<table>
+    <thead>
+        <th>state</th>
+        <th>population</th>
+    </thead>
+    <tbody>
+     <tbody>
+         {{#each states}}
+         <tr>
+             <td>{{stateID}}</td>
+             <td>{{statePop}}</td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+

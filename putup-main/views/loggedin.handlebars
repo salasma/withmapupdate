@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disease Map</title>
+    <link rel="stylesheet" href="css/loggedin.css">
+    <link rel="stylesheet" href="css/common.css">
+</head>
+
+<body class="w">
+    
+    <nav class="nav">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/profile">Profile</a></li>
+        </ul>
+    </nav>
+    
+    <div class="main">
+        <div class="info">
+            <h1>Welcome {{user.fname}} {{user.lname}}!</h1>
+                Email: {{user.email}} <br>
+                State: {{user.stateID}} <br>
+                Current Diagnosis: {{user.diagnosisName}} <br>
+        </div>
+        <div class="text">
+
+        <br>
+        <h2> Update Information: </h2>
+            <form id="updateUser" action="/loggedin/:{{user.userID}}" method="post">
+                First Name: <input type="text" name="fname" value="{{user.fname}}"><br>
+                Last Name: <input type="text" name="lname" value="{{user.lname}}"><br>
+                E-mail: <input type="text" name="email" value="{{user.email}}"><br>
+                Username: <input type="text" name="username" value="{{user.username}}"><br>
+                Password: <input type="text" name="password" value="{{user.password}}"><br>
+                <br>
+                <br>
+                State: <select name = "stateID">
+                           {{#each states}}
+                           <option value = "{{stateID}}"> {{stateID}}</option>
+                           {{/each}}
+                           </select> <br>
+                Diagnosis: <select name = "sicknessID">
+                   {{#each diagnoses}}
+                   <option value = "{{sicknessID}}"> {{diagnosisName}}</option>
+                   {{/each}}
+                   </select> <br>
+                <br>
+            <input type = "submit" value = "update">
+            </form>
+        </div>
+    </div>
+<br> <br>
+
+<table>
+    <thead>
+        <th>Start Date</th>
+        <th>End Date</th>
+        <th>Diagnosis</th>
+    </thead>
+    <tbody>
+        {{#each instances}}
+        <tr>
+            <td>{{startDate}}</td>
+            <td>{{endDate}}</td>
+            <td>{{diagnosisName}}</td>
+            <td><a href="/loggedin/{{userID}}/{{instanceID}}"> Update Instance</a><td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+
+<form id = "addInstance" action = "/instances/:{{instances.[0].userID}}" method = "post">
+start date: <input type = "date" name = "startDate"> <br>
+diagnosis: <select name = "sicknessID">
+    {{#each diagnoses}}
+    <option value = "{{sicknessID}}"> {{diagnosisName}}</option>
+    {{/each}}
+    </select> <br>
+
+<input type = "submit" value = "Add new instance">
+</form>
+
+<br> <br>
+
+<form id= "deleteUser" action= "/deleteUser/:{{user.userID}}" method="post">
+    <input type = "submit" value = "Delete account and all corresponding data">
+</form>
+
+    <footer class="footer">
+    </footer>
+    <br><br>
+ <a href="/">
+            <input class="btn" value="Sign Out">
+     </a>
+</body>
+
+</html>

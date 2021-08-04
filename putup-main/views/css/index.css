@@ -1,0 +1,151 @@
+.box1 {
+    float: right;
+    width: 30%;
+    height: 750px;
+    margin-top: 40px;
+    background-color: #eee;
+}
+.box1 img{
+    margin-left: 25%;
+    width: 60%;
+    padding: 5% 1%;
+    margin-top: 30px;
+    margin-bottom: 60px;
+    border: 2px solid #b1191a;
+    background-color: #fff;
+}
+.box1 .info {
+    width: 65%;
+    margin-left: 25%;
+}
+.box1 h1 {
+    text-align: center;
+    color: white;
+    font-size: 24px;
+    margin-bottom: 20px;
+    margin-top: 50px;
+    padding: 2%;
+    background-color: #b1191a;
+}
+.box1 li {
+    margin-top: 5%;
+    padding-left: 2%;
+    font-size: 20px;
+    font-weight: 700;
+    color: #666;
+}
+.box2 {
+    float: left;
+    width: 70%;
+    margin-top: 10px;
+    padding: 0 5%;
+}
+.box3 h1 {
+    color: #b1191a;
+    font-size: 24px;
+    margin-bottom: 20px;
+    padding: 2%;
+    border-bottom: 2px solid #b1191a;
+}
+.box3 li {
+    margin-top: 2%;
+    padding-left: 2%;
+    font-size: 20px;
+    color: #666;
+}
+.box3 .item {
+    width: 100%;
+    margin-bottom: 10px;
+} 
+.box3 span {
+    color: #666;
+    font-size: 20px;
+    margin-right: 5%;
+    padding-left: 2%;
+}
+.box3 .bar {
+    float: right;
+    margin-right: 20%;
+    width: 50%;
+    height: 20px;
+    border: 1px solid #b1191a;
+}
+.box3 .bar em {
+    display: inline-block;
+    background-color: #b1191a;
+    
+    height: 100%;
+}
+.box3 .bar .b1 {
+    width: 60%;
+}
+.box3 .bar .b2 {
+    width: 80%;
+}
+.box3 .bar .b3 {
+    width: 40%;
+}
+.box3 .bar .b4 {
+    width: 90%;
+}
+#outer {
+            
+    width: 520px;
+    height: 270px;
+    margin: 5px auto;
+    background-color: #b1191a;
+    position: relative;
+    overflow: hidden;
+}
+
+#imgList {
+    list-style: none;
+    position: absolute;
+    left: 0px;
+}
+
+#imgList li {
+    float: left;
+    margin: 0 10px;
+}
+
+#navDiv {
+    position: absolute;
+    bottom: 15px;
+}
+
+#navDiv a {
+    float: left;
+    width: 15px;
+    height: 15px;
+    background-color: red;
+    margin: 0 5px;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+}
+
+#navDiv a:hover {
+    background-color: black;
+}
+
+#newDiv a {
+    width: 20%;
+    height: 45px;
+    margin-left: 280px;
+    margin-top: 26px;
+    border: 0;
+    color: #fff;
+    background-color: #c81623;
+    font-size: 20px;
+}
+
+button {
+    width: 20%;
+    height: 45px;
+    margin-left: 280px;
+    margin-top: 26px;
+    border: 0;
+    color: #fff;
+    background-color: #c81623;
+    font-size: 20px;
+}

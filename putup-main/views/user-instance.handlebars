@@ -1,0 +1,13 @@
+
+
+<h2> Current Instance: {{instance.instanceID}}</h2>
+
+
+<form id="updateInstance" action="/loggedin/:{{instance.[0].userID}}/:{{instance.[0].instanceID}}" method="post">
+
+                Start Date: {{instance.[0].startDate}} <br>
+                End Date <input type="date" name="endDate"><br>
+                Diagnosis: {{instance.[0].diagnosisName}} <br>
+
+            <input type = "submit" value = "update">
+</form>
