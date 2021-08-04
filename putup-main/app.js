@@ -2,11 +2,10 @@ var mysql = require('mysql');
 const path = require('path');
 var pool = mysql.createPool({
 	connectionLimit: 10,
-	host: '127.0.0.1',
-	user: 'root',
-	password: 'root',                   //normally pool would be in a separate file for better security
-	database: 'cs340_hagmana'
-});
+	host: 'classmysql.engr.oregonstate.edu',
+	user: 'cs340_hagmana',
+	password: '1161',                   //normally pool would be in a separate file for better security
+	database: 'cs340_hagmana' });
 
 var express = require('express');
 
