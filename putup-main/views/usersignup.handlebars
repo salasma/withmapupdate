@@ -24,21 +24,36 @@
         </div>
         <div class="text">
             <form id = "addUser" action = "/signup" method = "post">
-                    Username: <input type="text" name="username"> <br>
-                    Password: <input type="text" name="password"> <br>
-                    First Name: <input type="text" name="fname"> <br>
-                    Last Name: <input type="text" name="lname"> <br>
-                    E-mail: <input type="text" name="email"> <br>
-                    State: <select name = "stateID">
+            <ul>
+            <li>
+                    <label>Username:</label> <input type="text" name="username">
+            </li>
+            <li>
+                    <label>Password:</label> <input type="text" name="password">
+            </li>
+            <li>
+                    <label>First Name:</label> <input type="text" name="fname">
+            </li>
+            <li>
+                    <label>Last Name:</label> <input type="text" name="lname">
+            </li>
+            <li>
+                    <label>E-mail:</label> <input type="text" name="email">
+            </li>
+            <li>
+                    <label>State:</label> <select name = "stateID">
                            {{#each states}}
                            <option value = "{{stateID}}"> {{stateID}}</option>
                            {{/each}}
-                           </select> <br>
-                    Current Diagnosis: <select name = "sicknessID">
+                           </select> 
+            </li>
+            <li>
+                    <label>Current Diagnosis:</label> <select name = "sicknessID">
                            {{#each diagnoses}}
                            <option value = "{{sicknessID}}"> {{diagnosisName}}</option>
                            {{/each}}
-                           </select> <br>
+                           </select>
+            </li>
 
                     <!--<div id="wrapper">
                      <label for="yes_no_radio">Receive Email Notifications?</label>
@@ -51,7 +66,9 @@
                             </div>
                      <a href="loggedin.html">-->
             <!--<input class="btn" value="                Submit">-->
-            <input type = "submit" value = "Sign-up">
+            <li>
+            <input class="btn" type = "submit" value = "Sign-up">
+            </li>
             </form> 
         </div>
     </div>
