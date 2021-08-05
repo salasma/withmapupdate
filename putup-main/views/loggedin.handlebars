@@ -21,34 +21,60 @@
     <div class="main">
         <div class="info">
             <h1>Welcome {{user.fname}} {{user.lname}}!</h1>
-                Email: {{user.email}} <br>
-                State: {{user.stateID}} <br>
-                Current Diagnosis: {{user.diagnosisName}} <br>
+            <ul>
+            <li>
+                Email: {{user.email}}
+            </li>
+            <li>
+                State: {{user.stateID}} 
+            </li>
+            <li>
+                Current Diagnosis: {{user.diagnosisName}}
+               </li>
+               </ul>
         </div>
         <div class="text">
 
         <br>
         <h2> Update Information: </h2>
             <form id="updateUser" action="/loggedin/:{{user.userID}}" method="post">
-                First Name: <input type="text" name="fname" value="{{user.fname}}"><br>
-                Last Name: <input type="text" name="lname" value="{{user.lname}}"><br>
-                E-mail: <input type="text" name="email" value="{{user.email}}"><br>
-                Username: <input type="text" name="username" value="{{user.username}}"><br>
-                Password: <input type="text" name="password" value="{{user.password}}"><br>
+            <ul>
+            <li>
+                <label>First Name:</label> <input type="text" name="fname" value="{{user.fname}}">
+            </li>
+            <li>
+                <label>Last Name:</label> <input type="text" name="lname" value="{{user.lname}}">
+            </li>
+            <li>
+                <label>E-mail:</label> <input type="text" name="email" value="{{user.email}}">
+            </li>
+            <li>
+                <label>Username:</label> <input type="text" name="username" value="{{user.username}}">
+            </li>
+            <li>
+                <label>Password:</label> <input type="text" name="password" value="{{user.password}}">
+            </li>
                 <br>
                 <br>
-                State: <select name = "stateID">
+                <li>
+                <label>State:</label> <select name = "stateID">
                            {{#each states}}
                            <option value = "{{stateID}}"> {{stateID}}</option>
                            {{/each}}
-                           </select> <br>
-                Diagnosis: <select name = "sicknessID">
+                           </select> 
+                 </li>
+                 <li>
+                <label>Diagnosis:</label> <select name = "sicknessID">
                    {{#each diagnoses}}
                    <option value = "{{sicknessID}}"> {{diagnosisName}}</option>
                    {{/each}}
-                   </select> <br>
+                   </select> 
+                   </li>
                 <br>
-            <input type = "submit" value = "update">
+                <li>
+            <input class="btn" type = "submit" value = "update">
+            </li>
+            </ul>
             </form>
         </div>
     </div>
@@ -73,20 +99,27 @@
 </table>
 
 <form id = "addInstance" action = "/instances/:{{instances.[0].userID}}" method = "post">
-start date: <input type = "date" name = "startDate"> <br>
-diagnosis: <select name = "sicknessID">
+<ul>
+<li>
+<label>Start date:</label> <input type = "date" name = "startDate">
+</li>
+<li>
+<label>Diagnosis:</label> <select name = "sicknessID">
     {{#each diagnoses}}
     <option value = "{{sicknessID}}"> {{diagnosisName}}</option>
     {{/each}}
-    </select> <br>
-
+    </select>
+    </li>
+<li>
 <input type = "submit" value = "Add new instance">
+</li>
+</ul>
 </form>
 
 <br> <br>
 
 <form id= "deleteUser" action= "/deleteUser/:{{user.userID}}" method="post">
-    <input type = "submit" value = "Delete account and all corresponding data">
+    <input class="btn" type = "submit" value = "Delete account and all corresponding data">
 </form>
 
     <footer class="footer">
