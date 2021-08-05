@@ -83,6 +83,7 @@
 <br> <br>
 <div class="main">
 <div class="text">
+<div class="thetable">
 <table>
     <thead>
         <th>Start Date</th>
@@ -100,8 +101,8 @@
         {{/each}}
     </tbody>
 </table>
-
-<form id = "addInstance" action = "/instances/:{{instances.[0].userID}}" method = "post">
+</div>
+<form id = "addInstance" action = "/instances/:{{user.userID}}" method = "post">
 <ul>
 <li>
 <label>Start date:</label> <input type = "date" name = "startDate">
