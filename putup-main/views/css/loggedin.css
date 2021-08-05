@@ -27,7 +27,7 @@
 .main .text .btn {
     width: 35%;
     height: 45px;
-    margin-left: 46%;
+    margin-left: 39.5%;
     margin-top: 26px;
     border: 0;
     color: #fff;
@@ -49,4 +49,11 @@
     width: 40%;
     border: 2px solid #999;
     margin-top: 20px;
+}
+.main .test .minititle {
+    font-size: 25px;
+    font-weight: 700;
+    color: #1692c8;
+    margin-left: 40%;
+    text-align: center;
 }
