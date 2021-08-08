@@ -22,10 +22,19 @@
 
 
 <form id="updateInstance" action="/loggedin/:{{instance.[0].userID}}/:{{instance.[0].instanceID}}" method="post">
+<ul>
+<li>
+                Start Date: {{instance.[0].startDate}}
+</li>
+<li>
+                End Date <input type="date" name="endDate">
+                </li>
+                <li>
+                Diagnosis: {{instance.[0].diagnosisName}}
+                </li>
+                <li>
 
-                Start Date: {{instance.[0].startDate}} <br>
-                End Date <input type="date" name="endDate"><br>
-                Diagnosis: {{instance.[0].diagnosisName}} <br>
-
-            <input type = "submit" value = "update">
+            <input class="btn" type = "submit" value = "update">
+            </li>
+            </ul>
 </form>
